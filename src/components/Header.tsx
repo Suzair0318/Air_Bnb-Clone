@@ -14,6 +14,7 @@ import {
   UserIcon,
 } from "./Icons";
 import SearchBar from "./SearchBar";
+import { AuthModal } from "./HostAuthCard";
 
 const tabs = [
   { id: "all", label: "All", Icon: NavGlobeIcon, href: "/" },
@@ -27,7 +28,13 @@ const ease = "cubic-bezier(0.4, 0, 0.2, 1)";
 export default function Header({ compact: forceCompact = false }: { compact?: boolean }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [authOpen, setAuthOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const openAuth = () => {
+    setMenuOpen(false);
+    setAuthOpen(true);
+  };
 
   const activeTab =
     pathname === "/homes"
@@ -163,17 +170,17 @@ export default function Header({ compact: forceCompact = false }: { compact?: bo
         </button>
 
         <div className="relative z-10 flex shrink-0 items-center">
-          <button
-            type="button"
+          <Link
+            href="/host"
             className="hidden rounded-full px-3.5 py-2.5 text-[14px] font-semibold text-[#222] transition hover:bg-black/5 lg:block"
           >
             Become a host
-          </button>
+          </Link>
 
           <div className="relative ml-2 flex items-center gap-2">
             <button
               type="button"
-              onClick={() => setMenuOpen((open) => !open)}
+              onClick={openAuth}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F2F2F2] text-[#222] transition hover:bg-[#EBEBEB]"
               aria-label="Account"
             >
@@ -199,19 +206,19 @@ export default function Header({ compact: forceCompact = false }: { compact?: bo
                 onClick={() => setMenuOpen(false)}
               />
               <div className="absolute right-0 top-[48px] z-50 w-[240px] overflow-hidden rounded-xl bg-white py-2 shadow-[0_2px_16px_rgba(0,0,0,0.12)]">
-                <button type="button" className="block w-full px-4 py-3 text-left text-sm font-semibold text-[#222] hover:bg-neutral-50">
+                <button type="button" onClick={openAuth} className="block w-full px-4 py-3 text-left text-sm font-semibold text-[#222] hover:bg-neutral-50">
                   Sign up
                 </button>
-                <button type="button" className="block w-full px-4 py-3 text-left text-sm text-[#222] hover:bg-neutral-50">
+                <button type="button" onClick={openAuth} className="block w-full px-4 py-3 text-left text-sm text-[#222] hover:bg-neutral-50">
                   Log in
                 </button>
                 <div className="my-2 border-t border-neutral-200" />
                 <button type="button" className="block w-full px-4 py-3 text-left text-sm text-[#222] hover:bg-neutral-50">
                   Gift cards
                 </button>
-                <button type="button" className="block w-full px-4 py-3 text-left text-sm text-[#222] hover:bg-neutral-50">
+                <Link href="/host" className="block w-full px-4 py-3 text-left text-sm text-[#222] hover:bg-neutral-50" onClick={() => setMenuOpen(false)}>
                   Airbnb your home
-                </button>
+                </Link>
                 <button type="button" className="block w-full px-4 py-3 text-left text-sm text-[#222] hover:bg-neutral-50">
                   Help Center
                 </button>
@@ -220,6 +227,8 @@ export default function Header({ compact: forceCompact = false }: { compact?: bo
           )}
         </div>
       </div>
+
+      <AuthModal open={authOpen} onClose={() => setAuthOpen(false)} />
 
       {/* Large search — slowly collapses upward */}
       {!forceCompact && (
