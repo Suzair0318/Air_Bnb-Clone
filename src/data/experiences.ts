@@ -1,0 +1,218 @@
+export type Experience = {
+  id: string;
+  title: string;
+  location?: string;
+  image: string;
+  price: number;
+  rating: number;
+  badge?: "Original" | "Trending";
+};
+
+export const originals: Experience[] = [
+  {
+    id: "e1",
+    title: "Carve marble with a third-generation sculptor",
+    location: "Athens, Greece",
+    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80",
+    price: 54,
+    rating: 5.0,
+    badge: "Original",
+  },
+  {
+    id: "e2",
+    title: "Whisk matcha in a quiet city ceremony",
+    location: "Shibuya City, Japan",
+    image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=800&q=80",
+    price: 45,
+    rating: 4.98,
+    badge: "Original",
+  },
+  {
+    id: "e3",
+    title: "Make Mexican spirits with a female distiller",
+    location: "Tulum, Mexico",
+    image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80",
+    price: 62,
+    rating: 4.97,
+    badge: "Original",
+  },
+  {
+    id: "e4",
+    title: "Craft chocolate with a pastry chef",
+    location: "Barcelona, Spain",
+    image: "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=800&q=80",
+    price: 58,
+    rating: 4.95,
+    badge: "Original",
+  },
+  {
+    id: "e5",
+    title: "Taste wine with a local vigneron",
+    location: "Burgundy, France",
+    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80",
+    price: 72,
+    rating: 4.99,
+    badge: "Original",
+  },
+  {
+    id: "e6",
+    title: "Lunch in the Prosecco hills with a winemaker",
+    location: "Veneto, Italy",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80",
+    price: 68,
+    rating: 5.0,
+    badge: "Original",
+  },
+  {
+    id: "e7",
+    title: "Sample pickles with a fourth-gen pickle maker",
+    location: "Los Angeles, California",
+    image: "https://images.unsplash.com/photo-1606676539940-1278092be46b?w=800&q=80",
+    price: 39,
+    rating: 4.92,
+    badge: "Original",
+  },
+  {
+    id: "e8",
+    title: "Bake sourdough with a neighborhood baker",
+    location: "Copenhagen, Denmark",
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&q=80",
+    price: 49,
+    rating: 4.96,
+    badge: "Original",
+  },
+];
+
+export const kualaLumpurExperiences: Experience[] = [
+  {
+    id: "kl1",
+    title: "Authentic Malaysian Street Food Tour with Locals",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80",
+    price: 40,
+    rating: 4.96,
+    badge: "Trending",
+  },
+  {
+    id: "kl2",
+    title: "Night market tasting walk in Chinatown",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+    price: 35,
+    rating: 4.89,
+    badge: "Trending",
+  },
+  {
+    id: "kl3",
+    title: "Batu Caves cultural visit with a local guide",
+    image: "https://images.unsplash.com/photo-1596422846543-75c6fc764e4a?w=800&q=80",
+    price: 28,
+    rating: 4.91,
+    badge: "Trending",
+  },
+  {
+    id: "kl4",
+    title: "Temple stairs photo walk at golden hour",
+    image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=80",
+    price: 32,
+    rating: 4.87,
+    badge: "Trending",
+  },
+  {
+    id: "kl5",
+    title: "Open-fire cooking class with a street chef",
+    image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
+    price: 55,
+    rating: 4.94,
+    badge: "Trending",
+  },
+  {
+    id: "kl6",
+    title: "Hands-on Malay kitchen workshop",
+    image: "https://images.unsplash.com/photo-1556911220-bff31c8750ea?w=800&q=80",
+    price: 48,
+    rating: 4.93,
+    badge: "Trending",
+  },
+  {
+    id: "kl7",
+    title: "Craft market stroll and local artisan meet",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+    price: 30,
+    rating: 4.85,
+    badge: "Trending",
+  },
+  {
+    id: "kl8",
+    title: "Petronas Towers evening skyline walk",
+    image: "https://images.unsplash.com/photo-1596422846543-75c6fc764e4a?w=800&q=80",
+    price: 26,
+    rating: 4.9,
+    badge: "Trending",
+  },
+];
+
+export const londonExperiences: Experience[] = [
+  {
+    id: "ldn1",
+    title: "Sky Garden Early Access with welcome drink",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80",
+    price: 25,
+    rating: 4.25,
+    badge: "Trending",
+  },
+  {
+    id: "ldn2",
+    title: "Sky Garden Entry with lunch overlooking the city",
+    image: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=800&q=80",
+    price: 48,
+    rating: 4.14,
+    badge: "Trending",
+  },
+  {
+    id: "ldn3",
+    title: "London Eye tickets with river views",
+    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80",
+    price: 36,
+    rating: 4.72,
+    badge: "Trending",
+  },
+  {
+    id: "ldn4",
+    title: "Dive Into Ocean Worlds aquarium experience",
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb75d5?w=800&q=80",
+    price: 38,
+    rating: 4.11,
+    badge: "Trending",
+  },
+  {
+    id: "ldn5",
+    title: "Floating sauna and cold plunge on the Thames",
+    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80",
+    price: 21,
+    rating: 4.85,
+    badge: "Trending",
+  },
+  {
+    id: "ldn6",
+    title: "The London Dungeon tickets",
+    image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=800&q=80",
+    price: 37,
+    rating: 4.58,
+    badge: "Trending",
+  },
+  {
+    id: "ldn7",
+    title: "Walk London with a local near Big Ben",
+    image: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=800&q=80",
+    price: 21,
+    rating: 4.98,
+    badge: "Trending",
+  },
+  {
+    id: "ldn8",
+    title: "Borough Market tasting tour",
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+    price: 44,
+    rating: 4.88,
+    badge: "Trending",
+  },
+];

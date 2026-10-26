@@ -119,6 +119,15 @@ export function UserIcon({ className = "h-6 w-6" }: IconProps) {
   );
 }
 
+export function UserAvatarIcon({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 32 32" fill="currentColor" aria-hidden>
+      <circle cx="16" cy="11" r="5.5" />
+      <path d="M5 27.5c0-5.5 4.8-9 11-9s11 3.5 11 9" />
+    </svg>
+  );
+}
+
 export function HeartIcon({ className = "h-6 w-6", filled = false }: IconProps & { filled?: boolean }) {
   return (
     <svg className={className} viewBox="0 0 32 32" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" aria-hidden>
@@ -131,6 +140,28 @@ export function StarIcon({ className = "h-3 w-3" }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 12 12" fill="currentColor" aria-hidden>
       <path d="M6 0l1.5 3.8L12 4.2 8.8 7l.9 4.8L6 9.4 2.3 11.8 3.2 7 0 4.2l4.5-.4L6 0z" />
+    </svg>
+  );
+}
+
+export function MapPinIcon({ className = "h-5 w-5" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M12 22s7-7.2 7-12.2A7 7 0 1 0 5 9.8C5 14.8 12 22 12 22z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      <circle cx="12" cy="9.5" r="2.2" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+export function CloseIcon({ className = "h-3 w-3" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M2 2l8 8M10 2L2 10" strokeLinecap="round" />
     </svg>
   );
 }

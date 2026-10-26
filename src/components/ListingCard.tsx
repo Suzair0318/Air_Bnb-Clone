@@ -18,7 +18,7 @@ export default function ListingCard({ listing }: { listing: Listing }) {
   return (
     <Link
       href={`/rooms/${listing.id}`}
-      className="group block w-[160px] shrink-0 snap-start sm:w-[180px] md:w-[calc((100%-6rem)/7)] lg:w-[calc((100%-6rem)/7)]"
+      className="group block w-[160px] shrink-0 snap-start sm:w-[180px] md:w-[calc((100%-6rem)/7)]"
     >
       <div className="relative mb-2.5 aspect-square overflow-hidden rounded-[12px] bg-neutral-200">
         <Image
@@ -48,11 +48,7 @@ export default function ListingCard({ listing }: { listing: Listing }) {
       </div>
 
       <div className="min-w-0">
-        <div className="flex items-start justify-between gap-1">
-          <h3 className="min-w-0 truncate text-[15px] font-semibold leading-5 text-[#222]">
-            {listing.type}
-          </h3>
-        </div>
+        <h3 className="truncate text-[15px] font-semibold leading-5 text-[#222]">{listing.type}</h3>
         <div className="mt-0.5 flex items-center justify-between gap-2">
           <p className="min-w-0 truncate text-[15px] leading-5 text-[#6A6A6A]">
             ${listing.price.toLocaleString()} for {listing.nights} nights
